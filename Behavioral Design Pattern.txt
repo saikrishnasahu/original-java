@@ -1,0 +1,39 @@
+Behavioral Design Pattern
+
+Strategy Pattern
+Code that varies should be encapsulated - much more flexible later to change
+program to an interface / super type not to an implementation - actual run time object is not locked to a particular type
+favour composition over inheritance - encapsulate into own classes, change behaviour at run time
+
+Observer Pattern
+Defines one-to-many dependency - if one changes dependents are notified automatically
+Observers depend on subjects - loosely coupled
+When two are loosely coupled they have little knowledge about each other
+
+Command Pattern
+encapsulate method invocation - encapsulate request as an object
+object invoking computation knows nothing about implementation
+4 components: command, receiver, invoker, client
+command - knows about receiver, invokes method of receiver, parameter of method are stored in command
+receiver - does the work
+invoker - knows to execute command, does not know about concrete command, only about command interface
+client - decides which command to execute, calls invoker with command object
+
+Iterator Pattern
+commonly used
+access elements in a sequential manner without knowing the underlying implementation
+
+Template Pattern
+abstract class exposes a defined template to execute it's method
+sub class can implement in it's own way but invocation would in the way defined by abstract class
+
+Null Object Pattern
+very hectic to find null references - lots of if checks
+create an abstract class specifying various operations
+concrete class extends this class and null object class providing do nothing implementation of this class
+approach can be used to check null value
+
+Visitor Pattern
+separating algorithm from an object structure on which it operates
+use case - add new operations to existing structure without modifying structure, similar to O principle
+extract common operations into a unique class

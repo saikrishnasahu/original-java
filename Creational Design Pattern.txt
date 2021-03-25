@@ -1,0 +1,22 @@
+Creational Design Pattern
+
+Singleton Pattern
+restricts instantion of a class to a single object
+useful when we require one instance across system
+make constructor private to restrict new instance creation
+eager - create instance at top and return
+lazy - create instance in method after checking null and return
+enum - best as it is thread safe by default
+
+Factory Pattern
+helps with loosely coupled design
+with new we get tied down to the implementation and not to an interface
+so need to encapsulate object creation
+
+Builder Pattern
+lots of parameter in constructor - hard to follow - same with setters
+not extensible - add new optional parameter - add new constructor - telescoping constructors
+immutable property - for parllel execution - not affected by threads
+
+DAO(Data Access Object) Pattern
+separate data class, DAO interface and database class that extends DAO

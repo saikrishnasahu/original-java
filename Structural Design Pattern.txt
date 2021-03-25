@@ -1,0 +1,13 @@
+Structural Design Pattern
+
+Decorator Pattern
+helps O principle
+attaches additional responsibilities to an object dynamically
+flexible alternative to sub classing for extending functionality
+
+Facade Pattern
+unified interface to a set of interfaces
+
+Adapter Pattern
+converts interface of an class to another interface as the client wants
+enables the classes to work together that otherwise could not as they were incompatible type

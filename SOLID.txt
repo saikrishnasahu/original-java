@@ -1,0 +1,42 @@
+SOLID Principle
+
+Simple specifications or abstract ideas. To implement - design patterns.
+
+Motivation - an application should take care of frequent changes during development and maintainance
+
+Changes in existing code should be minimized as they have already been unit tested
+
+S - Single Responsibility Principle
+
+Each entity (class/method) should have a single reason to change
+If more than one then spilt it using interface
+leads to low couple design and less and lighter dependency
+
+O - Open Close Principle
+
+Writing code for each new functionality should do minimal or no change to existing code
+open for extension close for modification
+closely related to single responsibility principle
+one class should not extend another class rather both should extend an interface so that the class can be changed at runtime
+using strategy pattern, template pattern
+
+L - Liskov Substitution Principle
+
+We create parent class and then extend it to child class. It should be such that the child should not break the parent functionality
+If we replace parent with child then there should not be any error as such
+Interface with lots of method, create a new suitable one with lesser methods
+
+I - Interface Segregation Principle
+
+We have the abstraction of system with interface
+Also there are interface with lots of methods - fat interface.
+Better to segregate them to smaller interfaces according to necessity
+No client should be forced to implement methods that they do not use.
+
+D - Dependency Inversion Principle
+
+high level depends on low level when changed both are changed - low level may be database connectivity
+No direct dependency rather high ----> abstraction <-------- low so low can be changed without changing high
+abstraction using interface
+with new key word they are tightly coupled instead with interface it is loosely coupled
+using factory, template, strategy, service locator, dependency injection

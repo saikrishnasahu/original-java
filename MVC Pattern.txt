@@ -1,0 +1,15 @@
+MVC (Model View Controller) Application
+
+separate application with this pattern
+model <----> controller <----> view
+
+Model
+class that carries data
+logic to update controller if data changes
+
+View
+respresent data model contains
+
+Controller
+link between view and data
+control data flow into model and updates view if data changes

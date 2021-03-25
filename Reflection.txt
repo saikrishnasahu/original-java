@@ -1,0 +1,44 @@
+Reflection
+
+ability to inspect and dynamically call classes, methods, attributes
+getClass - get class at run time that we do not know at compile time
+need not know all attributes at compile time and can be tied dynamically at run time
+lots of frameworks use it - Hibernate, Spring, JUnit, JPA
+mainly used in annotation
+
+Getting Class
+if know - Class<ClassName> a = ClassName.class; a.getName => packagename.ClassName
+if not know - 
+raw - Class a = Class.forName("packagename.ClassName); a.getName => packagename.ClassName
+generic - Class<Person> a = (Class<Person>)Class.forName("packagename.ClassName)
+forName throws checked exception ClassNotFoundException
+
+Getting Package
+a.getPackage => packagename
+
+Getting Field
+Field [] fields = a.getFields - not private
+f.getName - name
+f.getType - type
+
+Getting Method
+Method[] methods = a.getMethods - not private, returns Object methods as well as super type
+m.getName - name
+m.getReturnType - return type
+
+Getting Private Members
+Field [] fields = a.getDeclaredFields - all
+f.setAccessible(true)
+
+Getting Super Class and Interface
+a.getSuperClass.getName => packagename.SuperClassName
+Class[] interfaces = a.getInterfaces
+i.getName => packagename.Interface, returns java.lang.Object as well as super type
+
+Getting Annotations
+
+On top of annotation
+Retention should be run time to be accessible by reflection
+Target - where to place annotation
+
+m.isAnnotationPresent(AnnotationName.class)

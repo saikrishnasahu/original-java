@@ -1,0 +1,26 @@
+Service Locator (SL) Pattern
+
+for obtaining processes involved in obtaining a service with strong abstraction layer
+alternative to dependency injection (DI)
+central registry - service locator - request for a class, it returns the class
+
+Advantages
+like run time linker - allows code to be added at run time without recompiling
+makes optimaization - if some better solution - alter registry accordingly
+
+Disadvantages
+black box - harder to detect and recover error
+registry hides dependency - causes run time error
+difficult to maintian registry - DI is better
+
+Comparision with DI
+both implement dependency inversion principle - prefer abstraction over implementation - loosely coupled
+SL application asks through a message explicitly to locator - DI application no request so Inversion of Control (IOC)
+easier to test application with DI
+
+Principle
+separation of service configuration from use of services in application
+
+JNDI (Java Naming and Directory Interface)
+allows software to discover and look up data and objects via name
+an API - no implemenatation - usually service locator pattern
